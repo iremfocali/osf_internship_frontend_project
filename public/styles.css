@@ -1,0 +1,85 @@
+body {}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+.logo {
+    background-image: url(./363685671.jpg);
+    background-position: 738px 3000px;
+    width: 170px;
+    height: 70px;
+}
+
+.searchIcon {
+    background-image: url(./363685671.jpg);
+    background-position: -149px 67px;
+    width: 30px;
+    height: 30px;
+}
+
+.userIcon {
+    background-image: url(./363685671.jpg);
+    background-position: -208px 67px;
+    width: 30px;
+    height: 30px;
+}
+
+.likeIcon {
+    background-image: url(./363685671.jpg);
+    background-position: -236px 67px;
+    width: 30px;
+    height: 30px;
+}
+
+.bagIcon {
+    background-image: url(./363685671.jpg);
+    background-position: -176px 67px;
+    width: 30px;
+    height: 30px;
+}
+
+#navbarSupportedContent>ul>li {
+
+    font-size: 14px !important;
+}
+
+
+#navbarSupportedContent>ul>li>a {
+    padding-left: 18px;
+    padding-right: 18px;
+
+}
+
+
+#navbarSupportedContent>ul>li>div {
+    padding-left: 18px;
+    padding-right: 18px;
+
+}
+
+.link_1 {
+    user-select: none;
+}
+
+.link_1:hover {
+    color: #FFFFFF !important;
+    background-color: #262A33;
+    height: 60px;
+}
+
+.regular_nav_link:hover {
+    background-color: #FFFFFF !important;
+    color: #262A33 !important;
+
+}
+
+
+.mega_menu{
+    min-height: 100px; 
+    background-color: #262A33;
+    color: #FFFFFF;
+}
