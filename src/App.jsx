@@ -9,10 +9,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 // LOCAL COMPOMNENTs
+import Header from './body/header';
 import Services from './services';
 import HomePage from './homepage';
-import Header from './body/header';
+import Error404 from './body/Error404';
 import Footer from './body/footer';
+
 // CONTEXT
 import Defines from "./context/defines";
 
@@ -21,6 +23,10 @@ let subDefines = {
   title: "Ana Sayfa",
   breadcrumb: [{ name: "Home Page", url: "/homepage", active: true, type: 'link' }], //type iki çeşittir: tab ve type
   box: "irem",
+
+  like_counter: 0 ,
+  bag_counter: 0,
+
 }
 
 
@@ -40,6 +46,7 @@ const App = () => {
             <Route exact path="/" component={HomePage} />
             <Route path="/homepage" component={HomePage} />
             <Route path="/services" component={Services} />
+            <Route path="/error_404" component={Error404} />
 
 
           </Switch>
