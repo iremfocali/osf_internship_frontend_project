@@ -24,7 +24,7 @@ const Header = () => {
 
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#">
-                            <div className="logo" onClick={()=>{
+                            <div className="logo" onClick={() => {
                                 window.location.href = "/homepage";
                             }}>
                             </div>
@@ -107,7 +107,9 @@ const Header = () => {
 
                                 <li className="nav-item">
                                     <a className="nav-link regular_nav_link" href="#">
-                                        <div className="bagIcon">
+                                        <div className="bagIcon" onClick={() => {
+                                                window.location.href = "/shopping_cart";
+                                            }}>
                                             <span>{defines.bag_counter}</span>
                                         </div>
                                     </a>
@@ -125,17 +127,17 @@ const Header = () => {
                         </div>
                         <div className="row text-start">
                             <div className="col-xl-4 col-lg-4 col-12">
-                                {services.categories.map((value, key) => <div key={key} className={key < 8 ? "pt-1 pb-1" : "d-none"} onClick= {()=>{
+                                {services.categories.map((value, key) => <div key={key} className={key < 8 ? "pt-1 pb-1" : "d-none"} onClick={() => {
                                     window.location.href = "error_404"
                                 }}>{value}</div>)}
                             </div>
                             <div className="col-xl-4 col-lg-4 col-12">
-                                {services.categories.map((value, key) => <div key={key} className={key >= 8 && key < 16 ? "pt-1 pb-1" : "d-none"}  onClick= {()=>{
+                                {services.categories.map((value, key) => <div key={key} className={key >= 8 && key < 16 ? "pt-1 pb-1" : "d-none"} onClick={() => {
                                     window.location.href = "error_404"
                                 }}>{value}</div>)}
                             </div>
                             <div className="col-xl-4 col-lg-4 col-12">
-                                {services.categories.map((value, key) => <div key={key} className={key >= 16 && key < 24 ? "pt-1 pb-1" : "d-none"}  onClick= {()=>{
+                                {services.categories.map((value, key) => <div key={key} className={key >= 16 && key < 24 ? "pt-1 pb-1" : "d-none"} onClick={() => {
                                     window.location.href = "error_404"
                                 }}>{value}</div>)}
                             </div>
@@ -147,7 +149,7 @@ const Header = () => {
                         </div>
                         <div className="row text-start">
                             <div className="col">
-                                {services.sale.map((value, key) => <div key={key} className={key < 8 ? "pt-1 pb-1" : "d-none"}  onClick= {()=>{
+                                {services.sale.map((value, key) => <div key={key} className={key < 8 ? "pt-1 pb-1" : "d-none"} onClick={() => {
                                     window.location.href = "error_404"
                                 }}>{value}</div>)}
                             </div>
