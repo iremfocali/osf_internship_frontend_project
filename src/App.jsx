@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-import logo from './logo.svg';
-
 import './App.css';
 
 // Yönlendirici
@@ -14,6 +12,7 @@ import Services from './services';
 import HomePage from './homepage';
 import Error404 from './body/Error404';
 import Footer from './body/footer';
+import ShoppingCart from './shopping_cart';
 
 // CONTEXT
 import Defines from "./context/defines";
@@ -47,7 +46,7 @@ const App = () => {
             <Route path="/homepage" component={HomePage} />
             <Route path="/services" component={Services} />
             <Route path="/error_404" component={Error404} />
-
+            <Route path="/shopping_cart" component={ShoppingCart} /> 
 
           </Switch>
           <Footer/>
