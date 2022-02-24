@@ -11,15 +11,14 @@ const Breadcrumb = props => {
 
     return (
         <>
-            <div className="container">
                 <div className="row">
                     <div className="col">
-                        <ol className="breadcrumb mt-3">
+                        <ol className="breadcrumb mb-4">
 
                             {defines.breadcrumb.map((x, y) =>
 
                                 <li className={x.active ? "breadcrumb-item" : x.type = "tab" ? "breadcrumb-item active breadcrumb-tabs" : "breadcrumb-item active"} key={y}>
-                                    {x.active ? <a href={x.url} >{x.name}</a> : <span>{x.name}</span>}
+                                    {x.active ? <a href={x.url} className="active-breadcrumb-link" >{x.name}</a> : <span>{x.name}</span>}
                                 </li>
 
                             )}
@@ -27,7 +26,6 @@ const Breadcrumb = props => {
                         </ol>
                     </div>
                 </div>
-            </div>
         </>
     );
 };

@@ -22,7 +22,7 @@ const Footer = () => {
                         <li className="mb-3">Quebec, Quebec G2K 2H6</li>
                         <li className="mb-3"><a href="mailto:contact@osf-global.com">contact@osf-global.com</a></li>
                         <li className="mb-2" onClick={()=>{
-                             let text = "Press a button!\nEither OK or Cancel."
+                             let text = "Open Pick an app ? \n Always open these types of links in the associated app."
                             if (window.confirm(text) == true) {
                                 text = "You pressed OK!";
                               } else {
