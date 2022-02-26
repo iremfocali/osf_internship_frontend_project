@@ -20,7 +20,7 @@ const Header = () => {
         <>
 
             <div className="container" >
-                <nav className="navbar navbar-expand-lg navbar-light border border-3 border-top-0 border-start-0 border-end-0 pt-0 pb-0" style={{ backgroundColor: "#FFFFFF" }}>
+                <nav className="row navbar navbar-expand-lg navbar-light border border-3 border-top-0 border-start-0 border-end-0 pt-0 pb-0 navbar_border">
 
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#">
