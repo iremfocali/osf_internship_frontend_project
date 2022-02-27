@@ -12,7 +12,7 @@ const Footer = () => {
 
     return <>
         <div className="container text-start">
-            <div className="row">
+            <div className="row pt-5">
 
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
 
@@ -79,22 +79,22 @@ const Footer = () => {
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
                     <ul className="navbar-nav row mb-2 mb-lg-0 d-none d-xl-flex d-lg-flex" style={{ height: "60px", marginTop: "20px" }}>
                         <li className="nav-item col-3">
-                            <a className="nav-link regular_nav_link" target="_blank" href="https://www.facebook.com/">
+                            <a className="nav-link regular_nav_link" href="https://www.facebook.com/">
                                 <div className="facebookIcon"></div>
                             </a>
                         </li>
                         <li className="nav-item col-3">
-                            <a className="nav-link regular_nav_link" target="_blank" href="https://www.google.com/">
+                            <a className="nav-link regular_nav_link" href="https://www.google.com/">
                                 <div className="googleIcon"></div>
                             </a>
                         </li>
                         <li className="nav-item col-3">
-                            <a className="nav-link regular_nav_link" target="_blank" href="https://www.twitter.com/">
+                            <a className="nav-link regular_nav_link" href="https://www.twitter.com/">
                                 <div className="twitterIcon"></div>
                             </a>
                         </li>
                         <li className="nav-item col-3">
-                            <a className="nav-link regular_nav_link" target="_blank" href="https://www.pinterest.com/">
+                            <a className="nav-link regular_nav_link" href="https://www.pinterest.com/">
                                 <div className="pinterestIcon"></div>
                             </a>
                         </li>

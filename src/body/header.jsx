@@ -1,9 +1,10 @@
 import 'antd/lib/button/style/index.css';
+import 'antd/lib/input/style/index.css';
 
 import Defines from '../context/defines';
 import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Button } from "antd";
+import { Button,Input} from "antd";
 
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
                 <nav className="row navbar navbar-expand-lg navbar-light border border-3 border-top-0 border-start-0 border-end-0 pt-0 pb-0 navbar_border">
 
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="#">
+                        <a className="navbar-brand" href="/">
                             <div className="logo" onClick={() => {
                                 window.location.href = "/homepage";
                             }}>
@@ -52,10 +53,10 @@ const Header = () => {
 
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link bold link_1" href="#">COMPANY</a>
+                                    <a className="nav-link bold link_1" href="/">COMPANY</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link bold link_1" href="#">LIBRARY</a>
+                                    <a className="nav-link bold link_1" href="/">LIBRARY</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link bold link_1">CONTACT US</a>
@@ -64,41 +65,42 @@ const Header = () => {
 
                             <ul className="navbar-nav mb-2 mb-lg-0 d-none d-xl-flex d-lg-flex" style={{ marginRight: "40px", height: "60px", marginTop: "20px" }}>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle regular_nav_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle regular_nav_link" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         EN
                                             </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="#">EN</a></li>
-                                        <li><a className="dropdown-item" href="#">FR</a></li>
-                                        <li><a className="dropdown-item" href="#">UA</a></li>
+                                        <li><a className="dropdown-item" href="/">EN</a></li>
+                                        <li><a className="dropdown-item" href="/">FR</a></li>
+                                        <li><a className="dropdown-item" href="/">UA</a></li>
 
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle regular_nav_link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a className="nav-link dropdown-toggle regular_nav_link" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         $US
                                             </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="#">US</a></li>
-                                        <li><a className="dropdown-item" href="#">EUR</a></li>
+                                        <li><a className="dropdown-item" href="/">US</a></li>
+                                        <li><a className="dropdown-item" href="/">EUR</a></li>
                                         <li><hr className="dropdown-divider" /></li>
-                                        <li><a className="dropdown-item" href="#">UAH</a></li>
+                                        <li><a className="dropdown-item" href="/">UAH</a></li>
                                     </ul>
                                 </li>
                             </ul>
                             <ul className="navbar-nav mb-2 mb-lg-0 d-none d-xl-flex d-lg-flex " style={{ height: "60px", marginTop: "20px" }}>
                                 <li className="nav-item">
-                                    <a className="nav-link regular_nav_link" href="#">
+                                    <a className="nav-link regular_nav_link" href="/">
                                         <div className="searchIcon"></div>
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link regular_nav_link" href="#">
+   
+                                    <a className="nav-link regular_nav_link" href="/" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <div className="userIcon"></div>
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link regular_nav_link" href="#">
+                                    <a className="nav-link regular_nav_link" href="/">
                                         <div className="likeIcon">
                                             <span>{defines.like_counter}</span>
                                         </div>
@@ -106,10 +108,10 @@ const Header = () => {
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link regular_nav_link" href="#">
+                                    <a className="nav-link regular_nav_link" href="/">
                                         <div className="bagIcon" onClick={() => {
-                                                window.location.href = "/shopping_cart";
-                                            }}>
+                                            window.location.href = "/shopping_cart";
+                                        }}>
                                             <span>{defines.bag_counter}</span>
                                         </div>
                                     </a>
@@ -163,22 +165,22 @@ const Header = () => {
                     <div className="col-12 d-block d-xl-none d-lg-none">
                         <div className="row">
                             <div className="col-3">
-                                <a className="nav-link regular_nav_link" href="#">
+                                <a className="nav-link regular_nav_link" href="/">
                                     <div className="searchIcon"></div>
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a className="nav-link regular_nav_link" href="#">
+                                <a className="nav-link regular_nav_link" href="/">
                                     <div className="userIcon"></div>
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a className="nav-link regular_nav_link" href="#">
+                                <a className="nav-link regular_nav_link" href="/">
                                     <div className="likeIcon"></div>
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a className="nav-link regular_nav_link" href="#">
+                                <a className="nav-link regular_nav_link" href="/">
                                     <div className="bagIcon"></div>
                                 </a>
                             </div>
@@ -186,6 +188,28 @@ const Header = () => {
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+
+
+
+
+            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header"  style={{display: "flex", justifyContent: "center"}}>
+                            <div className="modal-title" id="exampleModalLabel">Sign in</div>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            ...
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
