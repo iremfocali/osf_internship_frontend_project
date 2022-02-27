@@ -7,28 +7,43 @@ import React, { useContext, useState, useEffect } from "react";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineReload } from "react-icons/ai";
 import { Button, Radio } from 'antd';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import Carousel from 'react-grid-carousel';
 
-
-const responsive = {
-    desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 3,
-        slidesToSlide: 3 // optional, default to 1.
+const featured_products = [
+    {
+        img: "./product_item/f_1.jpg",
+        slogan: "Awesome"
     },
-    tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-        slidesToSlide: 2 // optional, default to 1.
+    {
+        img: "./product_item/f_2.jpg",
+        slogan: "Marketing"
     },
-    mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-        slidesToSlide: 1 // optional, default to 1.
+    {
+        img: "./product_item/f_3.jpg",
+        slogan: "Awesome"
+    },
+    {
+        img: "./product_item/f_4.jpg",
+        slogan: "Marketing"
+    },
+    {
+        img: "./product_item/f_4.jpg",
+        slogan: "Awesome"
+    },
+    {
+        img: "./product_item/f_3.jpg",
+        slogan: "Marketing"
+    },
+    {
+        img: "./product_item/f_2.jpg",
+        slogan: "Awesome"
+    },
+    {
+        img: "./product_item/f_1.jpg",
+        slogan: "Marketing"
     }
-};
 
+]
 
 
 const HomePage = () => {
@@ -47,10 +62,15 @@ const HomePage = () => {
 
     }, [setDefines])
 
+    const [home, setHome] = useState({
+        active: false,
+    })
+
     return (
         <>
 
             <div className="container text-left">
+
                 <div className="row">
                     <div className="col-xl-9 col-lg-9 col-12">
 
@@ -93,14 +113,13 @@ const HomePage = () => {
                         </div>
 
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-12">
+                    <div className="col-xl-3 col-lg-3 col-12" style={{ display: "flex", justifyContent: "center" }}>
                         <div className="card rounded-md border-0" style={{ width: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md maincard_homepage w-100" style={{ height: "335px" }}></div>
                             <div className="card-body pt-4">
                                 <p className="card-title text-center text-xl">Follow us on Facebook</p>
                                 <p className="card-text text-center text-sm">Send ut perspiciatis unde omnis iste natus error sit</p>
                                 <div className="w-100 h-auto text-center pt-4" style={{ display: "flex", justifyContent: "center" }}>
-
                                     <button type="button" className="btn btn-outline-primary rounded-full border-2" style={{ width: "150px", height: "40px" }}><GrFacebookOption className="float-left mt-1 ml-2 mb-1 text-xl" /><span className="text-sm">FOLLOW</span></button>
                                 </div>
 
@@ -111,17 +130,24 @@ const HomePage = () => {
             </div>
             <div className="container" style={{ backgroundColor: "#262A33" }}>
                 <div className="row">
-                    <div className="col-12">
-                        <hr />
-                    </div>
-                    <div className="col-12 z-40 text-center text-white-600">
-                        Popular Items
+                    <div className="col">
+                        <div className="populer_items">
+                            <h1>
+                                <hr className='text-white-600' />
+                            </h1>
+                            <h1>
+                                <span>
+                                    Popular Items
+                                </span>
+                            </h1>
+
+                        </div>
                     </div>
                 </div>
 
-                <div className="row" style={{ padding: "10px 35px" }}>
+                <div className="row" style={{ padding: "0px 35px" }}>
 
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/0.jpg)" }}></div>
                             <div className="card-body">
@@ -130,7 +156,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/1.jpg)" }}></div>
                             <div className="card-body">
@@ -145,7 +171,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/2.jpg)" }}></div>
                             <div className="card-body">
@@ -154,7 +180,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/3.jpg)" }}></div>
                             <div className="card-body">
@@ -167,9 +193,9 @@ const HomePage = () => {
                 </div>
 
 
-                <div className="row" style={{ padding: "10px 35px" }}>
+                <div className={home.active ? "row" : "d-none"} style={{ padding: "10px 35px" }}>
 
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/4.jpg)" }}></div>
                             <div className="card-body">
@@ -178,7 +204,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/5.jpg)" }}></div>
                             <div className="card-body">
@@ -188,7 +214,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/6.jpg)" }}></div>
                             <div className="card-body">
@@ -197,7 +223,7 @@ const HomePage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
                             <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "360px", backgroundImage: "url(./product_item/7.jpg)" }}></div>
 
@@ -208,7 +234,22 @@ const HomePage = () => {
                 <div className="row">
                     <div className="col">
                         <div className="w-100 h-auto text-center pt-5 pb-5" style={{ display: "flex", justifyContent: "center" }}>
-                            <button type="button" className="btn btn-outline-light rounded-full border-2" style={{ width: "270px", height: "40px" }}>
+                            <button
+                                type="button"
+                                className="btn btn-outline-light rounded-full border-2"
+                                style={{ width: "270px", height: "40px" }}
+                                onClick={() => {
+
+                                    let active = home.active ? false : true
+
+                                    setHome(prev => {
+                                        const newService = { ...prev }
+                                        newService.active = active
+                                        return newService
+                                    })
+
+                                    //console.log('deneme')
+                                }}>
                                 <AiOutlineReload className="float-right mt-1 mb-1 text-xl" style={{ marginRight: "70px" }} />
                                 <span className="float-right text-sm mb-1 mr-2">LOAD MORE</span>
                             </button>
@@ -217,7 +258,7 @@ const HomePage = () => {
 
                 </div>
                 <div className="row">
-                    <div className="col pl-0 pr-0">
+                    <div className="col">
                         <div className="banner_OSF">
                             <h1>
                                 Banner OSF Theme
@@ -228,115 +269,76 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="row">
-
-                    <div className="col-12">
-
-
-                        <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div className="carousel-inner">
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_1.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_2.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_3.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_4.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_4.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_3.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_2.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="carousel-item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px" }}>
-                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "260px", backgroundImage: "url(./product_item/f_1.jpg)" }}></div>
-                                        <div className="card-body">
-                                            <p className="card-title text-center text-sm">Kristina Dam Oak Table With White Marble Top</p>
-                                            <p className="card-text text-center text-sm">$799.55</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-
-                            </div>
-
+                    <div className="col">
+                        <div className="featured_products">
+                            <h1>
+                                Featured Products
+                            </h1>
+                            <h3>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            </h3>
                         </div>
-
-
-
-
-
-
-
-
                     </div>
                 </div>
-                <div className="row" style={{backgroundColor:"#45413E"}}>
-                    <div className="col-4">
+
+                <div className="row">
+                    <div className="col">
+
+                        <Carousel
+                            className="row"
+                            cols={4}
+                            rows={1}
+                            gap={11}
+                            autoplay={5000}
+                            mobileBreakpoint={670}
+                            responsiveLayout={[
+                                {
+                                    breakpoint: 1200,
+                                    cols: 4
+                                },
+                                {
+                                    breakpoint: 990,
+                                    cols: 3
+                                },
+                                {
+                                    breakpoint: 768,
+                                    cols: 2
+                                }
+
+
+
+                            ]}
+                        >
+                            {featured_products.map((val, i) => (
+                                <Carousel.Item key={i}>
+                                    <div className="card rounded-md border-0" style={{ maxWidth: "18rem", marginTop: "25px", marginBottom: "25px" }}>
+                                        <div className="card-img-top rounded-md product_items_card w-100" style={{ height: "203px", backgroundImage: "url(" + val.img + ")" }}></div>
+                                        <div className="card-body text-sm">
+                                            <div className='w-100'>Kristina Dam Oak Table<br /> With White Marble Top</div>
+                                            <div className='w-100' style={{ color: "#86BC26" }}>{val.slogan}</div>
+                                        </div>
+                                    </div>
+
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
+                    </div>
+                </div>
+
+                <div className="row" style={{ backgroundColor: "#45413E" }}>
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                         <div className="info_1">
 
                         </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                         <div className="info_2">
 
                         </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-12">
                         <div className="info_3">
 
                         </div>

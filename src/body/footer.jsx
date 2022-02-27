@@ -15,8 +15,7 @@ const Footer = () => {
             <div className="row pt-5">
 
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-
-                    <ul className="list-none">
+                    <ul className="list-none p-3 pt-0">
                         <li>&copy; Copyright {moment().format("YYYY")}.</li>
                         <li className="mb-3">All Rights Reserved.</li>
                         <li className="font-bold mb-3">CONTACT</li>
@@ -26,7 +25,7 @@ const Footer = () => {
                         <li className="mb-3"><a href="mailto:contact@osf-global.com">contact@osf-global.com</a></li>
                         <li className="mb-2">
 
-                            <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div data-bs-toggle="modal" data-bs-target="#exampleModal_99">
                                 +1 (888) 548-4344
                             </div>
 
@@ -34,7 +33,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-                    <ul className="list-none">
+                    <ul className="list-none p-3 pt-0">
 
                         <li className="font-bold mb-3">CATEGORIEST</li>
                         <li className="mb-2"><a href="/error_404">Alcohol</a></li>
@@ -45,7 +44,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-                    <ul className="list-none">
+                    <ul className="list-none p-3 pt-0">
 
                         <li className="mb-2"><a href="/error_404">Home</a></li>
                         <li className="mb-2"><a href="/error_404">Jewelry</a></li>
@@ -58,7 +57,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-                    <ul className="list-none">
+                    <ul className="list-none p-3 pt-0">
 
                         <li className="mb-2"><a href="/error_404">Sport</a></li>
                         <li className="mb-2"><a href="/error_404">Toys</a></li>
@@ -67,7 +66,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-12">
-                    <ul className="list-none">
+                    <ul className="list-none p-3 pt-0">
 
                         <li className="font-bold mb-3">ABOUT</li>
                         <li className="mb-2"><a href="/error_404">About us</a></li>
@@ -103,11 +102,11 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="exampleModal_99" tabIndex="-1" aria-labelledby="exampleModalLabel_99" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Open Pick an App?</h5>
+                        <h5 className="modal-title" id="exampleModalLabel_99">Open Pick an App?</h5>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">

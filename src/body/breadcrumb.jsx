@@ -13,7 +13,7 @@ const Breadcrumb = props => {
         <>
                 <div className="row">
                     <div className="col">
-                        <ol className="breadcrumb mb-4">
+                        <ol className="breadcrumb p-5" style={{display: "flex", justifyContent: "center"}}>
 
                             {defines.breadcrumb.map((x, y) =>
 
