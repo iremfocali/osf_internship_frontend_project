@@ -15,7 +15,7 @@ const Error404 = props => {
             <div>
                 <nav aria-label="breadcrumb">
                     <ol className="breadcrumb style_breadcrumb">
-                      <li className="breadcrumb-item" ><a href="#">Home</a></li>
+                      <li className="breadcrumb-item" ><a href="/">Home</a></li>
                       <li className="breadcrumb-item active"  aria-current="page">404</li>
                     </ol>
                   </nav>
