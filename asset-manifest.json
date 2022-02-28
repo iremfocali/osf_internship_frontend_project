@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/osf_internship_frontend_project/static/css/main.be8acbef.css",
+    "main.js": "/osf_internship_frontend_project/static/js/main.2aaf0eee.js",
+    "static/js/787.bfb496a1.chunk.js": "/osf_internship_frontend_project/static/js/787.bfb496a1.chunk.js",
+    "index.html": "/osf_internship_frontend_project/index.html",
+    "main.be8acbef.css.map": "/osf_internship_frontend_project/static/css/main.be8acbef.css.map",
+    "main.2aaf0eee.js.map": "/osf_internship_frontend_project/static/js/main.2aaf0eee.js.map",
+    "787.bfb496a1.chunk.js.map": "/osf_internship_frontend_project/static/js/787.bfb496a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be8acbef.css",
+    "static/js/main.2aaf0eee.js"
+  ]
+}
